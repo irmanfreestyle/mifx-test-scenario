@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+.my-3 {
+  margin: 13px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.col {
+  flex: 1;
+  align-self: stretch;
+}
+
+.image-section .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quote-section {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+
+.quote-section .line {
+  width: 35px;
+  height: 2.5px;
+  background-color: #fff;
+}
+
+.card {
+  padding: 0 50px;
+}
+
+.card .quote-mark {
+  font-size: 90px;
+  height: 32px;
+  line-height: 80px;
+}
+
+.card .quote-text {
+  -ms-overflow-style: none; /* Edge, Internet Explorer */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll;
+  max-height: 94px;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.card .quote-text::-webkit-scrollbar {
+  background: transparent; /* Chrome/Safari/Webkit */
+  width: 0px;
+}
+
+.card .quote-name {
+  font-style: italic;
+}
+
+.nav-dots {
+  gap: 5px;
+}
+
+.nav-dots .dot {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  margin: 40px 0;
+}
+
+.dot.active {
+  background-color: #fff;
+}
+
+.dot:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.514);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .col {
+    max-height: 50%;
+  }
+}
