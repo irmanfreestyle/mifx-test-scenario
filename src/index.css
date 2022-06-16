@@ -35,6 +35,7 @@ h1, h2, h3 {
 }
 
 .col {
+  width: 50%;
   flex: 1;
   align-self: stretch;
 }
@@ -56,8 +57,48 @@ h1, h2, h3 {
   background-color: #fff;
 }
 
+.reviews-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.reviews-wrapper h2 {
+  margin-top: 30px;
+}
+
+.cards-wrapper {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  display: flex;
+  overflow-x: hidden;
+  word-break: break-word;
+}
+
+.nav-prev {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+}
+
+.nav-prev:hover {
+  cursor: pointer;
+}
+
+.nav-next {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+}
+
+.nav-next:hover {
+  cursor: pointer;
+}
+
 .card {
-  padding: 0 50px;
+  /* padding: 0 50px; */
+  min-width: 100%;
 }
 
 .card .quote-mark {
@@ -73,6 +114,8 @@ h1, h2, h3 {
   max-height: 94px;
   font-size: 13px;
   font-style: italic;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 .card .quote-text::-webkit-scrollbar {
@@ -112,5 +155,11 @@ h1, h2, h3 {
 
   .col {
     max-height: 50%;
+    width: 100%;
   }
+
+  /* .card .quote-text {
+    margin-left: 36px;
+    margin-right: 36px;
+  } */
 }
