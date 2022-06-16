@@ -1,5 +1,5 @@
 import NavDots from "./NavDots"
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { appContext } from "../context/appContext"
 
 export default () => {
@@ -7,9 +7,15 @@ export default () => {
 
   const slide = (pos) => {
     const calculated = activePos + pos
+
     if ((calculated >= 0) && (calculated < reviews.length)) {
-      setContext(item => ({ ...item, activePos: item.activePos + pos }))
-      slideCard(calculated)
+      if (activePos !== pos) {
+        document.querySelector('.image').classList.add('fade-out')
+      }
+      setTimeout(() => {
+        setContext(item => ({ ...item, activePos: item.activePos + pos }))
+        slideCard(calculated)
+      }, 300)
     }
   }
 

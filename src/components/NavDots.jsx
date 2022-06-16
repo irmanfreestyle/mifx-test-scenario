@@ -4,8 +4,14 @@ import { useContext } from "react"
 export default () => {
   const [{ activePos, reviews, slideCard }, setContext] = useContext(appContext)
   const setActivePos = pos => {
-    setContext(item => ({ ...item, activePos: pos }))
-    slideCard(pos)
+    if (activePos !== pos) {
+      document.querySelector('.image').classList.add('fade-out')
+    }
+
+    setTimeout(() => {
+      setContext(item => ({ ...item, activePos: pos }))
+      slideCard(pos)
+    }, 100)
   }
 
   return (
